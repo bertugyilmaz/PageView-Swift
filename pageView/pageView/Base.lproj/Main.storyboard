@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="yDI-bE-mj5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,9 +10,17 @@
     </dependencies>
     <scenes>
         <!--Page View Controller-->
+        <scene sceneID="XMm-M0-pGd">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="yDI-bE-mj5" customClass="PageViewController" customModule="pageView" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VR0-yE-vpe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1025" y="-503"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="0uJ-2z-RtC">
             <objects>
-                <viewController storyboardIdentifier="pageView" id="v3N-1C-xZz" customClass="PageViewController" customModule="pageView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pageView" id="v3N-1C-xZz" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hg0-Am-BPZ"/>
                         <viewControllerLayoutGuide type="bottom" id="v4v-c2-CIp"/>
@@ -30,7 +38,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="pageView" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="pageContentView" id="BYZ-38-t0r" customClass="ViewController" customModule="pageView" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>

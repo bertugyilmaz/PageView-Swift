@@ -19,12 +19,14 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
-        PageTitle = ["Hello World!", "Hello Everybody!", "Hello Bitch"]
+        PageTitle = ["Hello World!", "Hello Everybody!", "Hello"]
         
         self.dataSource = self
+
+        self.setViewControllers([getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         
     }
-    
+    // -UIPageViewControllerDataSource Methods
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
     {
         let pageContent : ViewController = viewController as! ViewController
@@ -37,8 +39,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         }
         index -= 1;
         
-        return nil
+        return getViewControllerAtIndex(index)
     }
+    
     public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
     {
         let pageContent : ViewController = viewController as! ViewController
@@ -55,7 +58,16 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
             return nil
         }
         
-        return nil
+        return getViewControllerAtIndex(index)
+    }
+    // -Others Methods
+    func getViewControllerAtIndex(_ index:NSInteger) -> ViewController {
+        let pageContent = self.storyboard?.instantiateViewController(withIdentifier: "pageContentView") as! ViewController
+        
+        pageContent.content = "\(PageTitle)"
+        pageContent.pageIndex = index
+        
+        return pageContent
     }
     
 }
