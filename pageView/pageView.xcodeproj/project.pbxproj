@@ -12,7 +12,7 @@
 		011FC84E1EDEB11900CCDE8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011FC84C1EDEB11900CCDE8C /* Main.storyboard */; };
 		011FC8501EDEB11900CCDE8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 011FC84F1EDEB11900CCDE8C /* Assets.xcassets */; };
 		011FC8531EDEB11900CCDE8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 011FC8511EDEB11900CCDE8C /* LaunchScreen.storyboard */; };
-		011FC85B1EDEB24100CCDE8C /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011FC85A1EDEB24100CCDE8C /* PageViewController.swift */; };
+		016AEA671EDEB974006161B1 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016AEA661EDEB974006161B1 /* PageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +23,7 @@
 		011FC84F1EDEB11900CCDE8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		011FC8521EDEB11900CCDE8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		011FC8541EDEB11900CCDE8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		011FC85A1EDEB24100CCDE8C /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		016AEA661EDEB974006161B1 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,8 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				011FC8481EDEB11900CCDE8C /* AppDelegate.swift */,
-				011FC85A1EDEB24100CCDE8C /* PageViewController.swift */,
 				011FC84A1EDEB11900CCDE8C /* ViewController.swift */,
+				016AEA661EDEB974006161B1 /* PageViewController.swift */,
 				011FC84C1EDEB11900CCDE8C /* Main.storyboard */,
 				011FC84F1EDEB11900CCDE8C /* Assets.xcassets */,
 				011FC8511EDEB11900CCDE8C /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				011FC85B1EDEB24100CCDE8C /* PageViewController.swift in Sources */,
+				016AEA671EDEB974006161B1 /* PageViewController.swift in Sources */,
 				011FC84B1EDEB11900CCDE8C /* ViewController.swift in Sources */,
 				011FC8491EDEB11900CCDE8C /* AppDelegate.swift in Sources */,
 			);
@@ -306,6 +306,7 @@
 				011FC8591EDEB11900CCDE8C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
