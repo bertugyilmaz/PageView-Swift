@@ -21,6 +21,16 @@ class ViewController: UIViewController {
         descriptionLabel.text = content
         pageController.currentPage = pageIndex
     }
+    @IBAction func prevButtonTapped(_ sender: Any) {
+        print("Previous Page")
+        let pageViewController = self.parent as! PageViewController
+        pageViewController.prevPageNavigator(pageIndex)
+    }
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        print("Next Page")
+        let pageViewController = self.parent as! PageViewController
+        pageViewController.nextPageNavigator(pageIndex)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

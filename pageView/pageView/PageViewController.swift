@@ -69,4 +69,16 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         return pageContent
     }
+    
+    func nextPageNavigator(_ index:NSInteger) {
+        
+        let nextWalkthroughVC = self.getViewControllerAtIndex(index+1)
+        setViewControllers([nextWalkthroughVC], direction: .forward, animated: true, completion: nil)
+    }
+    
+    func prevPageNavigator(_ index:NSInteger) {
+        
+        let prevWalkthroughVC = self.getViewControllerAtIndex(index+1)
+        setViewControllers([prevWalkthroughVC], direction: .reverse, animated: true, completion: nil)
+    }
 }
