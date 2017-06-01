@@ -26,11 +26,13 @@ class ViewController: UIViewController {
         nextPageBtn.isHidden = (pageIndex == 2) ? true : false
         prevPageBtn.isHidden = (pageIndex == 0) ? true : false
     }
+    
     @IBAction func prevButtonTapped(_ sender: Any) {
         print("Previous Page")
         let pageViewController = self.parent as! PageViewController
         pageViewController.prevPageNavigator(pageIndex)
     }
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         print("Next Page")
         let pageViewController = self.parent as! PageViewController

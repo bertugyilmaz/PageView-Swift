@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
+class PageViewController: UIPageViewController {
     
     var PageTitle: NSArray = NSArray()
     
@@ -25,40 +25,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         super.didReceiveMemoryWarning()
         
     }
-    // -UIPageViewControllerDataSource Methods
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?
-    {
-        let pageContent : ViewController = viewController as! ViewController
-        
-        var index = pageContent.pageIndex
-        
-        if (index == 0) || (index == NSNotFound) {
-            print("pageViewController-before")
-            return nil
-        }
-        index -= 1;
-        
-        return getViewControllerAtIndex(index)
-    }
-    
-    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?
-    {
-        let pageContent : ViewController = viewController as! ViewController
-        
-        var index = pageContent.pageIndex
-        
-        if index == NSNotFound {
-            print("pageViewController-after")
-            return nil
-        }
-        index += 1;
-        
-        if index == PageTitle.count {
-            return nil
-        }
-        
-        return getViewControllerAtIndex(index)
-    }
+
     // -Others Methods
     func getViewControllerAtIndex(_ index:NSInteger) -> ViewController {
         let pageContent = self.storyboard?.instantiateViewController(withIdentifier: "pageContentView") as! ViewController
@@ -79,5 +46,41 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
         
         let prevWalkthroughVC = self.getViewControllerAtIndex(index-1)
         setViewControllers([prevWalkthroughVC], direction: .reverse, animated: true, completion: nil)
+    }
+}
+
+extension PageViewController : UIPageViewControllerDataSource{
+    
+    // -UIPageViewControllerDataSource Methods
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController?{
+        let pageContent : ViewController = viewController as! ViewController
+        
+        var index = pageContent.pageIndex
+        
+        if (index == 0) || (index == NSNotFound) {
+            print("pageViewController-before")
+            return nil
+        }
+        index -= 1;
+        
+        return getViewControllerAtIndex(index)
+    }
+    
+    public func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController?{
+        let pageContent : ViewController = viewController as! ViewController
+        
+        var index = pageContent.pageIndex
+        
+        if index == NSNotFound {
+            print("pageViewController-after")
+            return nil
+        }
+        index += 1;
+        
+        if index == PageTitle.count {
+            return nil
+        }
+        
+        return getViewControllerAtIndex(index)
     }
 }
