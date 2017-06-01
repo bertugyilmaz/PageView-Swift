@@ -29,22 +29,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEc-QP-rVp">
-                                <rect key="frame" x="140" y="323" width="94" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="XBY-xT-pOj"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wEc-QP-rVp">
+                                <rect key="frame" x="141" y="323.5" width="93.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g5x-k4-pd7">
-                                <rect key="frame" x="168" y="610" width="39" height="37"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljo-d1-PTV">
-                                <rect key="frame" x="294" y="629" width="81" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ljo-d1-PTV">
+                                <rect key="frame" x="327" y="629" width="32" height="30"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -52,28 +44,36 @@
                                     <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bXK-1F-Ybr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHt-i8-bUH">
-                                <rect key="frame" x="0.0" y="629" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Prev">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHt-i8-bUH">
+                                <rect key="frame" x="16" y="629" width="59" height="30"/>
+                                <state key="normal" title="Previous">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="prevButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="stY-mQ-ayp"/>
                                 </connections>
                             </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="g5x-k4-pd7">
+                                <rect key="frame" x="168" y="622" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
                         <color key="backgroundColor" red="0.21911096569999999" green="0.54092115159999998" blue="0.8979560137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wEc-QP-rVp" secondAttribute="trailing" constant="141" id="76u-Ga-x2C"/>
-                            <constraint firstItem="wEc-QP-rVp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="303" id="AgA-i2-oKJ"/>
-                            <constraint firstItem="wEc-QP-rVp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="140" id="ay5-YS-TC2"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wEc-QP-rVp" secondAttribute="bottom" constant="323" id="s0x-g6-EaB"/>
+                            <constraint firstItem="kHt-i8-bUH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="BaW-Fi-XCD"/>
+                            <constraint firstItem="wEc-QP-rVp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Dl6-MZ-Crz"/>
+                            <constraint firstItem="wEc-QP-rVp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="J0c-xi-o2h"/>
+                            <constraint firstAttribute="trailing" secondItem="Ljo-d1-PTV" secondAttribute="trailing" constant="16" id="L99-4s-4Iy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="kHt-i8-bUH" secondAttribute="bottom" constant="8" id="NmS-vB-BLe"/>
+                            <constraint firstItem="g5x-k4-pd7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hSn-N8-7q5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="g5x-k4-pd7" secondAttribute="bottom" constant="8" id="rWn-ae-Ite"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ljo-d1-PTV" secondAttribute="bottom" constant="8" id="siy-AQ-4uH"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="wEc-QP-rVp" id="spc-Rm-eiV"/>
+                        <outlet property="nextPageBtn" destination="Ljo-d1-PTV" id="3VX-ZF-cYK"/>
                         <outlet property="pageController" destination="g5x-k4-pd7" id="yqW-MW-msN"/>
+                        <outlet property="prevPageBtn" destination="kHt-i8-bUH" id="lAx-X1-rLX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

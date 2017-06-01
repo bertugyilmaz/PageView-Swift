@@ -14,10 +14,9 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        PageTitle = ["Hello World!", "Hello Everybody!", "Hello"]
+        PageTitle = ["Hello World!", "Hello Everybody!", "Hello Humans!"]
         
         self.dataSource = self
-        
         self.setViewControllers([getViewControllerAtIndex(0)] as [UIViewController], direction: UIPageViewControllerNavigationDirection.forward, animated: false, completion: nil)
         
     }
@@ -78,7 +77,7 @@ class PageViewController: UIPageViewController, UIPageViewControllerDataSource {
     
     func prevPageNavigator(_ index:NSInteger) {
         
-        let prevWalkthroughVC = self.getViewControllerAtIndex(index+1)
+        let prevWalkthroughVC = self.getViewControllerAtIndex(index-1)
         setViewControllers([prevWalkthroughVC], direction: .reverse, animated: true, completion: nil)
     }
 }

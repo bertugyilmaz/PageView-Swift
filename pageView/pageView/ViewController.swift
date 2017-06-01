@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var pageController: UIPageControl!
+    @IBOutlet weak var nextPageBtn: UIButton!
+    @IBOutlet weak var prevPageBtn: UIButton!
     
     var content : String!
     var pageIndex : Int = 0
@@ -20,6 +22,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         descriptionLabel.text = content
         pageController.currentPage = pageIndex
+        
+        nextPageBtn.isHidden = (pageIndex == 2) ? true : false
+        prevPageBtn.isHidden = (pageIndex == 0) ? true : false
     }
     @IBAction func prevButtonTapped(_ sender: Any) {
         print("Previous Page")
